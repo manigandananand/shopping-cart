@@ -62,8 +62,8 @@ public class ProductController {
 		product.setCategory(category);
 		product.setSupplier(supplier);
 		
-		product.setCategoryID(category.getId());
-		product.setSupplierID(supplier.getId());
+		product.setCategory_id(category.getId());
+		product.setSupplier_id(supplier.getId());
 		productDAO.saveOrUpdate(product);
 
 		return "redirect:/products";

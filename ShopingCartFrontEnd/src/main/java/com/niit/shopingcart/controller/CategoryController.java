@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.niit.shopingcart.dao.CategoryDAO;
 import com.niit.shopingcart.model.Category;
 
-
 @Controller
 public class CategoryController {
 	

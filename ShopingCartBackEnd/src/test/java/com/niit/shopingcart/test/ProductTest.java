@@ -31,8 +31,8 @@ public class ProductTest {
 	    p.setDescription("This is PRD001");
 	    p.setPrice(2000);
 	    
-	    p.setCategoryID("HK-001");
-	    p.setSupplierID("SUP-001");
+	    p.setCategory_id("HK-001");
+	    p.setSupplier_id("SUP-001");
 	    
 	    ProductDAO productDAO = (ProductDAO)context.getBean("productDAO");
 	    productDAO.saveOrUpdate(p);
