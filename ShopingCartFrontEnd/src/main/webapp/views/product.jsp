@@ -5,6 +5,7 @@
 <html>
 <head>
 <title>Product Page</title>
+<linl rel="stylesheet" href="File.css">
 <style type="text/css">
 .tg {
 	border-collapse: collapse;
