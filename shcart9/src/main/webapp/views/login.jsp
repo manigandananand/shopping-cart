@@ -26,10 +26,10 @@
 				<li><a href="home.html">Home</a></li>
 				<li><a href="#">Products</a></li>
 				<li><a href="#">Deals</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="Contact.jsp">Contact</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="Registration.html"><span
+				<li><a href="register.jsp"><span
 						class="glyphicon glyphicon-user"></span>SIGNUP</a></li>
 				<li><a href="#"><span
 						class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>

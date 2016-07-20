@@ -1,10 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -25,58 +24,60 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li ><a href="home.html">Home</a></li>
-        <li><a href="products">Products</a></li>
-        <li><a href="categories">categories</a></li>
-        <li><a href="suppliers">suppliers</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li ><a href="view.jsp">Home</a></li>
+       
+        <li><a href="Contact.jsp">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a  href="Login.html"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
-        <li><a class="active" href="Registration.html"><span class="glyphicon glyphicon-user"></span>SIGNUP</a></li>
+        <li><a class="active" href="register.jsp"><span class="glyphicon glyphicon-user"></span>SIGNUP</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<h1>  This functionality not at implemented</h1>
 
-	<h2>Please fill the details</h2>
+	<h2 align="center">Please fill the details</h2>
+<c:url var="addAction" value="/register/add"></c:url>
 
-	<form:form action="../register" method="post">
-		<table>
+<form:form action="${addAction}" commandName="register" method="post">
+		<table align="center">
 			<tr>
 				<td>User ID:</td>
-				<td><input type="text" name="id"></td>
+				<td><input type="text" name="id" path="id"></td>
 			</tr>
 			<tr>
 				<td>User Name:</td>
-				<td><input type="text" name="name"></td>
+				<td><input type="text" name="name" path="name"></td>
 			</tr>
 			<tr>
 				<td>Password:</td>
-				<td><input type="text" name="password"></td>
+				<td><input type="text" name="password" path=password></td>
 			</tr>
 			<tr>
 				<td>Mobile No:</td>
-				<td><input type="text" name="mobile"></td>
+				<td><input type="text" name="contactnumber" path="contact_number" ></td>
 			</tr>
 			
 			<tr>
 				<td>Email:</td>
-				<td><input type="email" name="email"></td>
+				<td><input type="email" name="mailid" path="mail_id"></td>
 			</tr>
 			<tr>
 				<td>Addres:</td>
-				<td><input type="texta" width="20" height="10" name="address"></td>
+				<td><input type="textarea" width="20" height="10" name="address" path="address"></td>
 			</tr>
 			
 
-			<tr>
-				<td><input type="submit" value="Register">
-				<td><input type="reset" value="Reset">
-			</tr>
 			
+			<tr>
+				<td >
+						<input type="submit" value="Register" />
+					</td>
+					<td> <c:if test="${empty register.name}">
+						<input type="reset" value="<spring:message text="reset"/>" />
+					</c:if></td>
+			</tr>
 		</table>
 
 	</form:form>

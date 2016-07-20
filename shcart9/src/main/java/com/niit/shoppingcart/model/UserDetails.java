@@ -23,7 +23,13 @@ public class UserDetails {
 	private String mailId;
 	
 	private String address;
-	
+private String password;
+	public String getPassword() {
+	return password;
+}
+public void setPassword(String password) {
+	this.password = password;
+}
 	@Column(name="contact_number")
 	private String contactNumber;
 	

@@ -20,7 +20,7 @@ public class Product {
 	private String  id;
 	private String name;
 	private String description;
-	private double price;
+	private int price;
 	private String category_id;
 	private String supplier_id;
 	@ManyToOne
@@ -47,10 +47,10 @@ public class Product {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public double getPrice() {
+	public int getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 	public String getCategory_id() {

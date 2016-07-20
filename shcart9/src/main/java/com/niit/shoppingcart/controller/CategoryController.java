@@ -10,13 +10,27 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.niit.shoppingcart.dao.CartDAO;
 import com.niit.shoppingcart.dao.CategoryDAO;
 import com.niit.shoppingcart.model.Category;
 
 @Controller
 public class CategoryController {
 private CategoryDAO categoryDAO;
-	
+@Autowired
+private CartDAO cartDAO;
+
+
+
+@RequestMapping(value = "/onLoad", method = RequestMethod.GET)
+public String onLoad(Model model) {
+	System.out.println("onLoad");
+	model.addAttribute("category", new Category());
+	model.addAttribute("categoryList", this.categoryDAO.list());
+	model.addAttribute("cartSize", this.cartDAO.list().size());
+	return "/home";
+}
+
 	@Autowired(required=true)
 	@Qualifier(value="categoryDAO")
 	public void setCategoryDAO(CategoryDAO ps){

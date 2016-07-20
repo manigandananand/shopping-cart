@@ -4,8 +4,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="refresh" content="0; URL=./onLoad" />
-
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 <%@include file="/includes/Head.jsp" %>
@@ -26,10 +24,10 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="home.html">Home</a></li>
-        <li><a href="CategoryUser.jsp">Products</a></li>
+        <li class="active"><a href="view.jsp">Home</a></li>
+        <li><a href="#">Products</a></li>
         <li><a href="#">Deals</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Contact.jsp">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a  href="login.jsp"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
@@ -110,9 +108,5 @@
 
 
 
-Welcome to shopping cart
-<br>
-Exist user ?  <a href="login.jsp">  Login here</a>  <br>
-New user ?  <a href="views/register.jsp">  Register here</a>
 </body>
 </html>
