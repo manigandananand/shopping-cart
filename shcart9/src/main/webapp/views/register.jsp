@@ -29,7 +29,7 @@
         <li><a href="Contact.jsp">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a  href="Login.html"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
+        <li><a  href="login.jsp"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
         <li><a class="active" href="register.jsp"><span class="glyphicon glyphicon-user"></span>SIGNUP</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
       </ul>
@@ -52,16 +52,16 @@
 			</tr>
 			<tr>
 				<td>Password:</td>
-				<td><input type="text" name="password" path=password></td>
+				<td><input type="text" name="password" path="password"></td>
 			</tr>
 			<tr>
 				<td>Mobile No:</td>
-				<td><input type="text" name="contactnumber" path="contact_number" ></td>
+				<td><input type="text" name="contactNumber" path="contactNumber" ></td>
 			</tr>
 			
 			<tr>
 				<td>Email:</td>
-				<td><input type="email" name="mailid" path="mail_id"></td>
+				<td><input type="email" name="mailId" path="mailId"></td>
 			</tr>
 			<tr>
 				<td>Addres:</td>

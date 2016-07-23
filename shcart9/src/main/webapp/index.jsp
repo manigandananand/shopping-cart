@@ -4,7 +4,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="refresh" content="0; URL=./onLoad" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
@@ -27,8 +26,8 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="home.html">Home</a></li>
-        <li><a href="CategoryUser.jsp">Products</a></li>
-        <li><a href="#">Deals</a></li>
+        <li><a href="CategoryUser.jsp">Admin</a></li>
+        <li><a href="views/userpage.jsp">User</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">

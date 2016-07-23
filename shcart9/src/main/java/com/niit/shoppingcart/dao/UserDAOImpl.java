@@ -33,7 +33,7 @@ private SessionFactory sessionFactory;
 @Transactional
 	public User get(String id) {
 		// TODO Auto-generated method stub
-	String hql="from User where id="+id;
+	String hql="from UserDetails where id="+id;
 	Query query=sessionFactory.getCurrentSession().createQuery(hql);
 	@SuppressWarnings("unchecked")
 	List<User> list=query.list();
@@ -64,7 +64,7 @@ private SessionFactory sessionFactory;
 @Transactional
 	public boolean isValidUser(String id, String password, boolean isAdmin) {
 		// TODO Auto-generated method stub
-	String hql = "from User where id= '" + id + "' and " + " password ='" + password+"'";
+	String hql = "from UserDetails where id= '" + id + "' and " + " password ='" + password+"'";
 	Query query = sessionFactory.getCurrentSession().createQuery(hql);
 
 	@SuppressWarnings("unchecked")

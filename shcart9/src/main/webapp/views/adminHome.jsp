@@ -27,7 +27,7 @@
         <li><a href="products">Products</a></li>
         <li><a href="categories">categories</a></li>
         <li><a href="suppliers">suppliers</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="views/Contact.jsp">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a  href="Login.html"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>

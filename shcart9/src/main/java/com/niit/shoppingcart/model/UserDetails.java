@@ -16,21 +16,19 @@ public class UserDetails {
 	@Id
 	@Column(name="id")
 	private String id;
-	
 	private String name;
-	
-	@Column(name="mail_id")
+
+	@Column(name = "mailId")
 	private String mailId;
-	
 	private String address;
-private String password;
+	private String password;
 	public String getPassword() {
 	return password;
 }
 public void setPassword(String password) {
 	this.password = password;
 }
-	@Column(name="contact_number")
+	@Column(name="contactNumber") 
 	private String contactNumber;
 	
 	
