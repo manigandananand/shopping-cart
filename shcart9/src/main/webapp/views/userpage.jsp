@@ -24,10 +24,10 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="userpage.jsp">Home</a></li>
-        <li><a href="men.jsp">MEN</a></li>
-        <li><a href="women.jsp">WOMEN</a></li>
+        <li><a href="men">MEN</a></li>
+        <li><a href="women">WOMEN</a></li>
         
-        <li><a href="Contact.jsp">Contact</a></li>
+        <li><a href="Contact">Contact</a></li>
       </ul>
       
     </div>

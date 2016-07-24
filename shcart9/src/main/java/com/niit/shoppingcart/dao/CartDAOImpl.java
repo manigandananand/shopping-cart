@@ -18,9 +18,9 @@ public class CartDAOImpl implements CartDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
 
-	public CartDAOImpl(SessionFactory sessionFactory) {
+	/*public CartDAOImpl(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
-	}
+	}*/
 
 	@Transactional
 	public List<Cart> list() {

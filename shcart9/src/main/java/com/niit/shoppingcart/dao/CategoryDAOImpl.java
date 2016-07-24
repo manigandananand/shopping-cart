@@ -19,9 +19,9 @@ public class CategoryDAOImpl implements CategoryDAO {
 	private SessionFactory sessionFactory;
 
 
-	public CategoryDAOImpl(SessionFactory sessionFactory) {
+	/*public CategoryDAOImpl(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
-	}
+	}*/
 	@Transactional
 	public List<Category> list() {
 		// TODO Auto-generated method stub

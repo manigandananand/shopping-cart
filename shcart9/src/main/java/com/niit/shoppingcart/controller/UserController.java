@@ -36,8 +36,41 @@ public class UserController {
 		mv.addObject("name", name);
 		return mv;
 	}
-	
-	
+    @RequestMapping("/Contact")
+	public ModelAndView contact()
+	{
+		return new ModelAndView("Contact");
+	}
+    @RequestMapping("/men")
+	public ModelAndView men()
+	{
+		return new ModelAndView("men");
+	}
+    @RequestMapping("/women")
+	public ModelAndView women()
+	{
+		return new ModelAndView("women");
+	}
+    @RequestMapping("/CategoryUser")
+	public ModelAndView admin()
+	{
+		return new ModelAndView("CategoryUser");
+	}@RequestMapping("/AccessDenied")
+	public ModelAndView AccessDenied()
+	{
+		return new ModelAndView("AccessDenied");
+	}
+    @RequestMapping("/userpage")
+	public ModelAndView user()
+	{
+		return new ModelAndView("userpage");
+	}
+    @RequestMapping("/login")
+   	public ModelAndView login()
+   	{
+   		return new ModelAndView("login");
+   	}
+    
 	@RequestMapping(value= "/register/add", method = RequestMethod.POST)
 	public String addCategory(@ModelAttribute("register") UserDetails userdetails){
 		

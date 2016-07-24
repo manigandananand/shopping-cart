@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.niit.shoppingcart.model.CustomerModel;
 import com.niit.shoppingcart.model.User;
 import com.niit.shoppingcart.model.UserDetails;
 
@@ -17,9 +18,9 @@ public class UserDAOImpl implements UserDAO {
 	@Autowired
 private SessionFactory sessionFactory;
 	
-	public UserDAOImpl(SessionFactory sessionFactory){
+	/*public UserDAOImpl(SessionFactory sessionFactory){
 		this.sessionFactory = sessionFactory;
-	}
+	}*/
 @Transactional
 	public List<User> list() {
 		// TODO Auto-generated method stub
@@ -33,7 +34,7 @@ private SessionFactory sessionFactory;
 @Transactional
 	public User get(String id) {
 		// TODO Auto-generated method stub
-	String hql="from UserDetails where id="+id;
+	String hql="from User where id="+id;
 	Query query=sessionFactory.getCurrentSession().createQuery(hql);
 	@SuppressWarnings("unchecked")
 	List<User> list=query.list();
@@ -75,6 +76,11 @@ private SessionFactory sessionFactory;
 	}
 		return false;
 	}
+public void saveOrUpdate(CustomerModel cd) {
+	// TODO Auto-generated method stub
+	sessionFactory.getCurrentSession().saveOrUpdate(cd);
+	
+}
 	
 	
 	

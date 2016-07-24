@@ -18,9 +18,9 @@ public class SupplierDAOImpl implements SupplierDAO {
 	private SessionFactory sessionFactory;
 
 
-	public SupplierDAOImpl(SessionFactory sessionFactory) {
+	/*public SupplierDAOImpl(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
-	}
+	}*/
 	@Transactional
 	public List<Supplier> list() {
 		// TODO Auto-generated method stub

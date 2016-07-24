@@ -23,9 +23,9 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         
-<li><a href="userpage.jsp">Home</a></li>
-<li><a href="women.jsp">Women</a></li>
-      <li><a href="Contact.jsp">Contact</a></li>
+<li><a href="userpage">Home</a></li>
+<li><a href="women">Women</a></li>
+      <li><a href="Contact">Contact</a></li>
       </ul>
       
     </div>
