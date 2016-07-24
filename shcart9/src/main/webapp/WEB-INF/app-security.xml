@@ -12,7 +12,7 @@
         <intercept-url pattern="/logout" access="permitAll" />
         <intercept-url pattern="/AccessDenied" access="permitAll" />
         <intercept-url pattern="/Contact" access="permitAll"/>
-        	
+        <intercept-url pattern="/adminHome" access="hasRole('ROLE_ADMIN')"/>	
         <intercept-url pattern="/CategoryUser" access="hasRole('ROLE_ADMIN')"/>
         <intercept-url pattern="/userpage"  access="hasRole('ROLE_ADMIN')"/> 
         <intercept-url pattern="/UserPage"  access="hasRole('ROLE_USER')"/>
@@ -29,11 +29,8 @@
             users-by-username-query="select name,password from User_Details  where name=?"
             authorities-by-username-query="select c.name, r.role_name from User_Details c, user_role r where c.name=? and c.id = r.user_id"
             />
-             --> <!--  <jdbc-user-service data-source-ref="dataSource"
-            users-by-username-query="select name,password from User_Details where name=?"
-            authorities-by-username-query="select c.name, r.role_name from User_Details c, user_role r where c.name=? and c.cid = r.user_id"
-            />  -->
- <jdbc-user-service data-source-ref="dataSource"
+             --> 
+ 			<jdbc-user-service data-source-ref="dataSource"
             users-by-username-query="select cname,password,enabled from customermodel where cname=?"
             authorities-by-username-query="select c.cname, r.role_name from customermodel c, user_role r where c.cname=? and c.cid = r.user_id"
             /> 

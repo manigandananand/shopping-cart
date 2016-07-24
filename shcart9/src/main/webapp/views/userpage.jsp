@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<meta http-equiv="refresh" content="0; URL=./onLoad" />
 <%@include file="/includes/Head.jsp" %>
 </head>
 <body>

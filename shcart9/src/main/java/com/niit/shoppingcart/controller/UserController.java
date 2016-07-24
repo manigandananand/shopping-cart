@@ -65,6 +65,11 @@ public class UserController {
 	{
 		return new ModelAndView("userpage");
 	}
+    @RequestMapping("/adminHome")
+	public ModelAndView adminHome()
+	{
+		return new ModelAndView("adminHome");
+	}
     @RequestMapping("/login")
    	public ModelAndView login()
    	{

@@ -26,7 +26,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="home.html">Home</a></li>
-        <li><a href="CategoryUser">Admin</a></li>
+        <li><a href="adminHome">Admin</a></li>
         <li><a href="userpage">User</a></li>
         <li><a href="Contact">Contact</a></li>
       </ul>

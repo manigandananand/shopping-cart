@@ -27,10 +27,11 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="views/view.jsp">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Deals</a></li>
-        <li><a href="views/Contact.jsp">Contact</a></li>
+       <li class="active"><a href="userpage.jsp">Home</a></li>
+        <li><a href="men">MEN</a></li>
+        <li><a href="women">WOMEN</a></li>
+        
+        <li><a href="Contact">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a  href="login.jsp"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
