@@ -32,8 +32,8 @@ public class ApplicationContextConfig {
 	
  
 	
-	@Bean(name = "h2DataSource")
-	public DataSource getH2DataSource() {
+	@Bean(name = "dataSource")
+	public DataSource getdataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("org.h2.Driver");
 		dataSource.setUrl("jdbc:h2:tcp://localhost/~/test");
@@ -79,7 +79,7 @@ public class ApplicationContextConfig {
 		return transactionManager;
 	}
     
-   /* @Autowired
+/*    @Autowired
     @Bean(name = "categoryDao")
     public CategoryDAO getCategoryDao(SessionFactory sessionFactory) {
     	return new CategoryDAOImpl(sessionFactory);
@@ -89,8 +89,8 @@ public class ApplicationContextConfig {
     @Bean(name = "cartDao")
     public CartDAO getCartDao(SessionFactory sessionFactory) {
     	return new CartDAOImpl(sessionFactory);
-    }*/
-    
+    }
+*/    
     
 
 

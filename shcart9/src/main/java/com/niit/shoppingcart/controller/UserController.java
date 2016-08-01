@@ -75,8 +75,18 @@ public class UserController {
    	{
    		return new ModelAndView("login");
    	}
+    @RequestMapping("/logout")
+   	public ModelAndView logout()
+   	{
+   		return new ModelAndView("login");
+   	}
+    @RequestMapping("/home")
+   	public ModelAndView home()
+   	{
+   		return new ModelAndView("home");
+   	}
     
-	@RequestMapping(value= "/register/add", method = RequestMethod.POST)
+	@RequestMapping(value= "/register", method = RequestMethod.POST)
 	public String addCategory(@ModelAttribute("register") UserDetails userdetails){
 		
 			userDAO.saveOrUpdate(userdetails);

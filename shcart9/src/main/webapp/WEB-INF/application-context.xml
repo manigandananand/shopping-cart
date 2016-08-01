@@ -37,7 +37,7 @@
         <property name="hibernateProperties">  
             <props>  
                 <prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>  
-                <prop key="hibernate.current_session_context_class">thread</prop>
+               <!--  <prop key="hibernate.current_session_context_class">thread</prop> -->
                 <prop key="hibernate.hbm2ddl.auto">update</prop>  
                 <prop key="hibernate.show_sql">true</prop>  
             </props>  
@@ -49,6 +49,7 @@
 		<property name="username" value="sa" />
 		<property name="password" value="" />
 	</bean>
+	    <context:annotation-config/>
 	
 	<context:component-scan base-package="com.niit.shoppingcart.*" />
 	<tx:annotation-driven/>

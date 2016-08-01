@@ -113,6 +113,10 @@
 	<!-- Adding the h2 Dependencies Ended-->
 	
 	<!-- Adding the additional Dependencies Started-->	
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+        </dependency>
 	<dependency>
 		<groupId>commons-dbcp</groupId>
 		<artifactId>commons-dbcp</artifactId>

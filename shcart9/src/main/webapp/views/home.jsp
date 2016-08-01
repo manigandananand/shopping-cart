@@ -27,16 +27,16 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-       <li class="active"><a href="userpage.jsp">Home</a></li>
+       <li class="active"><a href="INDEX.JSP">Home</a></li>
         <li><a href="men">MEN</a></li>
         <li><a href="women">WOMEN</a></li>
         
         <li><a href="Contact">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a  href="login.jsp"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
+        <li><a  href="login"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
         <li><a  href="views/register.jsp"><span class="glyphicon glyphicon-user"></span>SIGNUP</a></li>
-        <li><a href="mycart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart( ${cartSize} )</a></li>
+        <%-- <li><a href="mycart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart( ${cartSize} )</a></li> --%>
       </ul>
     </div>
   </div>

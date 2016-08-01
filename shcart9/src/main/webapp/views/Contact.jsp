@@ -23,12 +23,12 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li ><a href="view.jsp">Home</a></li>
+        <li ><a href="index.jsp">Home</a></li>
        
         <li class="active"><a href="contact.jsp">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a  href="login.jsp"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
+        <li><a  href="login"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
         <li><a  href="views/register.jsp"><span class="glyphicon glyphicon-user"></span>SIGNUP</a></li>
               </ul>
     </div>
@@ -36,8 +36,10 @@
 </nav>
  <h>hi my self xxxxxxx
  </h>
- <p>my contact:************
- 	my address:************
- 	</p>
+ <p>This website is used to by LUXARY WATCHES for all in different varieties.<br/>
+Constructed on 07-July-2016. <br/>
+This website is Copyright © LUXARY WATCHES.com<br/>
+Thank you for visiting.
+ </p>
 </body>
 </html>

@@ -26,14 +26,12 @@
         <li class="active"><a href="products">Products</a></li>
         <li><a href="categories">categories</a></li>
         <li><a href="suppliers">suppliers</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Contact">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a  href="login.jsp"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
-        <li><a  href="register.jsp"><span class="glyphicon glyphicon-user"></span>SIGNUP</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-      </ul>
-    </div>
+        <li><a href="<c:url value="j_spring_security_logout" />" ><span class="glyphicon glyphicon-log-out"></span> LOGOUT</a></li>
+              </ul>
+       </div>
   </div>
 </nav>
 
@@ -54,7 +52,7 @@
 					</c:when>
 
 					<c:otherwise>
-						<td><form:input path="id" patttern =".{6,7}" required="true" title="id should contains 6 to 7 characters" /></td>
+						<td><form:input path="id" required="true"  patttern =".{6,7}" title="id should contains 6 to 7 characters" /></td>
 					</c:otherwise>
 				</c:choose>
 			<tr>
@@ -62,7 +60,7 @@
 				<td><form:label path="name">
 						<spring:message text="Name" />
 					</form:label></td>
-				<td><form:input path="name" required="true" /></td>
+				<td><form:input path="name"  required="true" /></td>
 			</tr>
 			
 			

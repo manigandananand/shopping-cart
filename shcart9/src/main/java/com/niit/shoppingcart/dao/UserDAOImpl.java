@@ -76,11 +76,7 @@ private SessionFactory sessionFactory;
 	}
 		return false;
 	}
-public void saveOrUpdate(CustomerModel cd) {
-	// TODO Auto-generated method stub
-	sessionFactory.getCurrentSession().saveOrUpdate(cd);
-	
-}
+
 	
 	
 	
