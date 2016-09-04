@@ -16,6 +16,13 @@ public class Cart {
 	
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
+	@Transient
+	private int total;
+	private String userID;
+	private String productName;
+	private int price;
+	private int quantity;
+	private char status;
 	
 		public int getId() {
 		return id;
@@ -23,8 +30,6 @@ public class Cart {
 	public void setId(int id) {
 		this.id = id;
 	}
-	@Transient
-	private int total;
 	
 	public int getTotal() {
 		return total;
@@ -33,7 +38,6 @@ public class Cart {
 		this.total = total;
 	}
 
-	private String userID;
 	public String getUserID() {
 		return userID;
 	}
@@ -42,10 +46,6 @@ public class Cart {
 	}
 	
 
-	private String productName;
-	private int price;
-	private int quantity;
-	private char status;
 	public int getPrice() {
 		return price;
 	}

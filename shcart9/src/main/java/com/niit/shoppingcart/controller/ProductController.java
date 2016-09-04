@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.niit.shoppingcart.model.Category;
 import com.niit.shoppingcart.model.Product;
@@ -82,7 +83,22 @@ public class ProductController {
 	
 		return "product";
 	}
-	@RequestMapping("product/get/{id}")
+	@RequestMapping(value = "product/get/{id}")
+	public String getSelectedProduct(@PathVariable("id") String id, Model model,
+			RedirectAttributes redirectAttributes) {
+		redirectAttributes.addFlashAttribute("selectedProduct",productDAO.get(id));
+		
+		return "redirect:/backToHome";
+	}
+	@RequestMapping(value = "/backToHome" , method = RequestMethod.GET )
+	public String backToHome(@ModelAttribute("selectedProduct") 
+	final Object selectedProduct,final  Model model)
+	{
+		model.addAttribute("selectedProduct", selectedProduct);
+		model.addAttribute("categoryList", this.categoryDAO.list());
+	return "/home";
+	}
+	/*@RequestMapping("product/get/{id}")
 	public String getSelectedProduct(@PathVariable("id") String id, Model model) {
 		System.out.println("getSelectedProduct");
 		model.addAttribute("selectedProduct", this.productDAO.get(id));
@@ -91,5 +107,5 @@ public class ProductController {
 		return "/home";
 	
 	}
-
+*/
 }

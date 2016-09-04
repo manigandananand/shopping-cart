@@ -16,6 +16,8 @@
         <intercept-url pattern="/CategoryUser" access="hasRole('ROLE_ADMIN')"/>
         <intercept-url pattern="/userpage"  access="hasRole('ROLE_ADMIN')"/> 
         <intercept-url pattern="/UserPage"  access="hasRole('ROLE_USER')"/>
+        <intercept-url pattern="/men"  access="hasRole('ROLE_USER')"/>
+        <intercept-url pattern="/women"  access="hasRole('ROLE_USER')"/>
         
 		<form-login login-page="/login"  default-target-url="/"  authentication-failure-url="/AccessDenied" />
 		<form-login login-page="/login" default-target-url="/"  authentication-failure-url="/AccessDenied" />
@@ -25,16 +27,16 @@
  
     <authentication-manager alias="authenticationManager">
         <authentication-provider>
-           <!--  <jdbc-user-service data-source-ref="dataSource"
-            users-by-username-query="select name,password from User_Details  where name=?"
-            authorities-by-username-query="select c.name, r.role_name from User_Details c, USER_ROLE r where c.name=? and c.id = r.user_id"
+              <jdbc-user-service data-source-ref="dataSource"
+            users-by-username-query="select name,password,enabled from User_Details  where name=?"
+            authorities-by-username-query="select c.name, r.role from User_Details c, USER_ROLE r where  c.id = r.id and c.name=?"
             /> 
-          -->
+            <!-- 
   			 <jdbc-user-service data-source-ref="dataSource"
             users-by-username-query="select cname,password,enabled from customermodel where cname=?"
             authorities-by-username-query="select c.cname, r.role_name from customermodel c, user_role r where c.cname=? and c.cid = r.user_id"
-            />  
-      
+            />  --> 
+       
 <!--        <user name="rahul" password="123" authorities="ROLE_USER"/> -->
          </authentication-provider>
     </authentication-manager>

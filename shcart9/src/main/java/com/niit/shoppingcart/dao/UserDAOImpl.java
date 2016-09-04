@@ -8,10 +8,9 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.niit.shoppingcart.model.CustomerModel;
 import com.niit.shoppingcart.model.User;
 import com.niit.shoppingcart.model.UserDetails;
+import com.niit.shoppingcart.model.UserRole;
 
 @Repository("UserDAO")
 public class UserDAOImpl implements UserDAO {
@@ -49,10 +48,16 @@ private SessionFactory sessionFactory;
 		sessionFactory.getCurrentSession().saveOrUpdate(user);
 	}
 @Transactional
-	public void saveOrUpdate(UserDetails userDetails) {
+	public void saveOrUpdate(UserDetails userDetails, UserRole userRole) {
 		// TODO Auto-generated method stub
-		sessionFactory.getCurrentSession().saveOrUpdate(userDetails);
-	}
+	userDetails.setEnabled(true);
+	UserRole userRoler=new UserRole();
+	userRole.setId(userDetails.getId());
+	userRole.setRole("ROLE_USER");
+	sessionFactory.getCurrentSession().saveOrUpdate(userDetails);
+	sessionFactory.getCurrentSession().saveOrUpdate(userRole);
+
+}
 @Transactional
 	public void delete(String id) {
 		// TODO Auto-generated method stub
@@ -76,7 +81,12 @@ private SessionFactory sessionFactory;
 	}
 		return false;
 	}
-
+/*@Transactional
+public void saveOrUpdate(UserRole userRole) {
+	sessionFactory.getCurrentSession().saveOrUpdate(userRole);
+	userRole.setRole("ROLE_USER");
+}
+*/
 	
 	
 	

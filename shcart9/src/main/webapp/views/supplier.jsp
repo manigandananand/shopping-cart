@@ -1,14 +1,5 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@ page session="false"%>
-<html>
-<head>
-<title>Supplier Page</title>
 <%@include file="/includes/Head.jsp" %>
-</head>
-<body>
-<img src="<c:url value="/resources/images/logo.PNG"/>" class="img-responsive" alt=""/>
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -99,5 +90,4 @@
 			</c:forEach>
 		</table>
 	</c:if>
-</body>
-</html>
+<%@include file="/includes/Fotter.jsp"%>

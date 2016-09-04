@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.niit.shoppingcart.dao.UserDAO;
 import com.niit.shoppingcart.model.Category;
 import com.niit.shoppingcart.model.UserDetails;
+import com.niit.shoppingcart.model.UserRole;
 
 @Controller
 public class UserController {
@@ -46,6 +47,16 @@ public class UserController {
 	{
 		return new ModelAndView("men");
 	}
+    @RequestMapping("/viewproduct")
+	public ModelAndView viewproduct()
+	{
+		return new ModelAndView("viewproduct");
+	}
+    @RequestMapping("/productList")
+	public ModelAndView productList()
+	{
+		return new ModelAndView("productList");
+	}
     @RequestMapping("/women")
 	public ModelAndView women()
 	{
@@ -64,6 +75,11 @@ public class UserController {
 	public ModelAndView user()
 	{
 		return new ModelAndView("userpage");
+	}
+    @RequestMapping("/users")
+	public ModelAndView users()
+	{
+		return new ModelAndView("users");
 	}
     @RequestMapping("/adminHome")
 	public ModelAndView adminHome()
@@ -87,9 +103,10 @@ public class UserController {
    	}
     
 	@RequestMapping(value= "/register", method = RequestMethod.POST)
-	public String addCategory(@ModelAttribute("register") UserDetails userdetails){
+	public String addCategory(@ModelAttribute("register") UserDetails userdetails,UserRole userRole){
 		
-			userDAO.saveOrUpdate(userdetails);
+			userDAO.saveOrUpdate(userdetails,userRole);
+			
 			
 		
 		return "register";

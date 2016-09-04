@@ -66,13 +66,14 @@ public class CartDAOImpl implements CartDAO {
 	}
 
 	@Transactional
-	public int getTotalAmount(String id) {
+	public Long getTotalAmount(String id) {
 		String hql = "select sum(price) from Cart where userID = " + "'" + id + "'";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		/*query.executeUpdate();
 		return query.getFirstResult();*/   // Need to check
+		Long sum=(Long) query.uniqueResult();
 		
-		return 26322;
+		return sum;
 
 	}
 

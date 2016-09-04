@@ -1,5 +1,7 @@
 package com.niit.shoppingcart.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,7 +19,7 @@ import com.niit.shoppingcart.model.Category;
 import com.niit.shoppingcart.model.Product;
 
 
-@Controller
+@Controller 
 public class CartController {
 	
 	
@@ -32,7 +34,7 @@ public class CartController {
 
 	
 	@RequestMapping(value = "/myCart", method = RequestMethod.GET)
-	public String myCart(Model model) {
+	public String myCart(Model model, HttpSession session) {
 		model.addAttribute("category", new Category());
 		model.addAttribute("categoryList", categoryDAO.list());
 	

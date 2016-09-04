@@ -24,6 +24,7 @@ import com.niit.shoppingcart.model.Product;
 import com.niit.shoppingcart.model.Supplier;
 import com.niit.shoppingcart.model.User;
 import com.niit.shoppingcart.model.UserDetails;
+import com.niit.shoppingcart.model.UserRole;
 
 @Configuration
 @ComponentScan("com.niit.shoppingcart")
@@ -65,7 +66,8 @@ public class ApplicationContextConfig {
     	sessionBuilder.addAnnotatedClasses(Product.class);
     	sessionBuilder.addAnnotatedClasses(Cart.class);
     	sessionBuilder.addAnnotatedClasses(UserDetails.class);
-    	//sessionBuilder.addAnnotatedClasses(Account.class);
+   	//sessionBuilder.addAnnotatedClasses(Account.class);
+    	sessionBuilder.addAnnotatedClasses(UserRole.class);
     	return sessionBuilder.buildSessionFactory();
     }
     

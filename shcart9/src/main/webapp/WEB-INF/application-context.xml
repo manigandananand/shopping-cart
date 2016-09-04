@@ -25,13 +25,13 @@
         <property name="dataSource" ref="dataSource" />
         <property name="annotatedClasses">
         	<list>
+        			<value>com.niit.shoppingcart.model.Cart</value>
        			<value>com.niit.shoppingcart.model.Category</value>
-       			<value>com.niit.shoppingcart.model.Cart</value>
        			<value>com.niit.shoppingcart.model.Product</value>
        			<value>com.niit.shoppingcart.model.Supplier</value>
        			<value>com.niit.shoppingcart.model.User</value>
        			<value>com.niit.shoppingcart.model.UserDetails</value>
-       		
+      	<value>com.niit.shoppingcart.model.UserRole</value>
       		</list>
        	</property>
         <property name="hibernateProperties">  

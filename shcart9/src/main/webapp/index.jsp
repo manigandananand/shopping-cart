@@ -1,17 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 <%@include file="/includes/Head.jsp" %>
- 
-</head>
-<body>
-  <img src="<c:url value="/resources/images/logo.PNG"/>" class="img-responsive" alt=""/>
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -97,21 +85,5 @@
       </div>
     </div>
   </div>
-</div><br><footer class="container-fluid text-center">
-  <p>Online Store Copyright</p>  
-  <form class="form-inline">Get deals:
-    <input type="email" class="form-control" size="50" placeholder="Email Address">
-    <button type="button" class="btn btn-danger">Sign Up</button>
-  </form>
-</footer>
 </div>
-
-
-
-
-Welcome to shopping cart
-<br>
-Exist user ?  <a href="login.jsp">  Login here</a>  <br>
-New user ?  <a href="views/register.jsp">  Register here</a>
-</body>
-</html>
+<%@include file="/includes/Fotter.jsp"%>
