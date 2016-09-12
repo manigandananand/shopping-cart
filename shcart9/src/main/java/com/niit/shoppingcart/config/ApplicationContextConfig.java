@@ -80,8 +80,8 @@ public class ApplicationContextConfig {
 
 		return transactionManager;
 	}
-    
-/*    @Autowired
+/*    
+    @Autowired
     @Bean(name = "categoryDao")
     public CategoryDAO getCategoryDao(SessionFactory sessionFactory) {
     	return new CategoryDAOImpl(sessionFactory);

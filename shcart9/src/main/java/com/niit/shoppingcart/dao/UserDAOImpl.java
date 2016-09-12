@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.hibernate.Criteria;
 import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -50,8 +51,9 @@ private SessionFactory sessionFactory;
 @Transactional
 	public void saveOrUpdate(UserDetails userDetails, UserRole userRole) {
 		// TODO Auto-generated method stub
+	 Session session = sessionFactory.getCurrentSession();
+
 	userDetails.setEnabled(true);
-	UserRole userRoler=new UserRole();
 	userRole.setId(userDetails.getId());
 	userRole.setRole("ROLE_USER");
 	sessionFactory.getCurrentSession().saveOrUpdate(userDetails);

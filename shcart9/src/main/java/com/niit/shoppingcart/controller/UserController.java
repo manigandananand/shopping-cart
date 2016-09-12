@@ -19,7 +19,7 @@ public class UserController {
    @Autowired
 	UserDAO userDAO;
     
-    @RequestMapping("/isValidUser")
+    /*@RequestMapping("/isValidUser")
 	public ModelAndView isValidUser(@RequestParam(value = "name") String name,
 			@RequestParam(value = "password") String password) {
 		System.out.println("in controller");
@@ -37,7 +37,14 @@ public class UserController {
 		mv.addObject("name", name);
 		return mv;
 	}
-    @RequestMapping("/Contact")
+    */
+   @RequestMapping("/")
+	public ModelAndView index()
+	{
+		return new ModelAndView("index");
+	}
+   
+   @RequestMapping("/Contact")
 	public ModelAndView contact()
 	{
 		return new ModelAndView("Contact");
@@ -47,12 +54,7 @@ public class UserController {
 	{
 		return new ModelAndView("men");
 	}
-    @RequestMapping("/viewproduct")
-	public ModelAndView viewproduct()
-	{
-		return new ModelAndView("viewproduct");
-	}
-    @RequestMapping("/productList")
+   @RequestMapping("/productList")
 	public ModelAndView productList()
 	{
 		return new ModelAndView("productList");
@@ -104,12 +106,8 @@ public class UserController {
     
 	@RequestMapping(value= "/register", method = RequestMethod.POST)
 	public String addCategory(@ModelAttribute("register") UserDetails userdetails,UserRole userRole){
-		
-			userDAO.saveOrUpdate(userdetails,userRole);
-			
-			
-		
-		return "register";
+		userDAO.saveOrUpdate(userdetails,userRole);
+		return "login";
 		
 	}
 }

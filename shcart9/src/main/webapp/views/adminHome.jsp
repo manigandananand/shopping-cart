@@ -11,7 +11,7 @@
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="index.jsp">Home</a></li>
+				<li class="active"><a href="">Home</a></li>
 				<li><a href="products">Products</a></li>
 				<li><a href="categories">categories</a></li>
 				<li><a href="suppliers">suppliers</a></li>

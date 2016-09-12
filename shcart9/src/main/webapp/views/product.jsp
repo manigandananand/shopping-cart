@@ -1,4 +1,3 @@
-
 <%@include file="/includes/Head.jsp"%>
 <nav class="navbar navbar-inverse">
 	<div class="container-fluid">
@@ -12,7 +11,7 @@
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
-				<li><a href="index.jsp">Home</a></li>
+				<li><a href="">Home</a></li>
 				<li class="active"><a href="products">Products</a></li>
 				<li><a href="categories">categories</a></li>
 				<li><a href="suppliers">suppliers</a></li>
@@ -31,66 +30,66 @@
 <c:url var="addAction" value="/product/add"></c:url>
 
 <form:form action="${addAction}" commandName="product">
-	<table align="center">
+	<table align="center" class="table table-striped table-hover">
 		<tr>
-			<td><form:label path="id">
+			<td align="center"><form:label path="id">
 					<spring:message text="ID" />
 				</form:label></td>
 			<c:choose>
 				<c:when test="${!empty product.id}">
-					<td><form:input path="id" disabled="true" readonly="true" />
+					<td><form:input path="id" disabled="true" class="form-control" readonly="true" />
 					</td>
 				</c:when>
 
 				<c:otherwise>
-					<td><form:input path="id" required="true" patttern=".{6,7}"
+					<td><form:input path="id" required="true" class="form-control" patttern=".{6,7}"
 							title="id should contains 6 to 7 characters" /></td>
 				</c:otherwise>
 			</c:choose>
 		<tr>
 			<form:input path="id" hidden="true" />
-			<td><form:label path="name">
+			<td align="center"><form:label path="name">
 					<spring:message text="Name" />
 				</form:label></td>
-			<td><form:input path="name" required="true" /></td>
+			<td><form:input path="name" required="true" class="form-control" /></td>
 		</tr>
 
 
 		<tr>
-			<td><form:label path="price">
+			<td align="center"><form:label path="price">
 					<spring:message text="Price" />
 				</form:label></td>
-			<td><form:input path="price" required="true" /></td>
+			<td><form:input path="price" required="true"  class="form-control" /></td>
 		</tr>
 
 		<tr>
-			<td><form:label path="description">
+			<td align="center"><form:label path="description">
 					<spring:message text="Description" />
 				</form:label></td>
-			<td><form:input path="description" required="true" /></td>
+			<td><form:input path="description" required="true" class="form-control" /></td>
 		</tr>
 
 		<tr>
-			<td><form:label path="supplier">
+			<td align="center"><form:label path="supplier">
 					<spring:message text="Supplier" />
 				</form:label></td>
 			<%-- <td><form:input path="supplier.name" required="true" /></td> --%>
-			<td><form:select path="supplier.name" items="${supplierList}"
+			<td><form:select  path="supplier.name" class="form-control" items="${supplierList}"
 					itemValue="name" itemLabel="name" /></td>
 		</tr>
 		<tr>
-			<td><form:label path="category">
+			<td align="center"><form:label path="category">
 					<spring:message text="Category" />
 				</form:label></td>
 			<%-- <td><form:input path="category.name" required="true" /></td> --%>
-			<td><form:select path="category.name" items="${categoryList}"
+			<td><form:select path="category.name" class="form-control" items="${categoryList}"
 					itemValue="name" itemLabel="name" /></td>
 		</tr>
 		<tr>
-			<td colspan="2"><c:if test="${!empty product.name}">
-					<input type="submit" value="<spring:message text="Edit Product"/>" />
+			<td colspan="2" align="center"><c:if test="${!empty product.name}">
+					<input type="submit" class="btn btn-primary" value="<spring:message text="Edit Product"/>" />
 				</c:if> <c:if test="${empty product.name}">
-					<input type="submit" value="<spring:message text="Add Product"/>" />
+					<input type="submit" class="btn btn-primary" value="<spring:message text="Add Product"/>" />
 				</c:if></td>
 		</tr>
 	</table>
@@ -98,7 +97,7 @@
 <br>
 <h3 align="center">Product List</h3>
 <c:if test="${!empty productList}">
-	<table class="tg" align="center">
+	<table class="table table-striped table-hover" align="center">
 		<tr>
 			<th width="80">Product ID</th>
 			<th width="120">Product Name</th>
