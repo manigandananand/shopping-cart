@@ -13,31 +13,22 @@ import org.springframework.stereotype.Component;
 @Component
 public class User {
 	@Id
-	@Column(name="id")
+	@Column(name="name")
 	@NotEmpty(message="Enter Your Name")
-	private String id;
+	private String name;
 	@NotEmpty(message="Enter Your password")
 	private String password;
-	@Column(name = "admin")
-
-	private boolean isAdmin;
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
 	public String getPassword() {
 		return password;
 	}
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public boolean isAdmin() {
-		return isAdmin;
+	public String getName() {
+		return name;
 	}
-	public void setAdmin(boolean isAdmin) {
-		this.isAdmin = isAdmin;
+	public void setName(String name) {
+		this.name = name;
 	}
-
+	
 }

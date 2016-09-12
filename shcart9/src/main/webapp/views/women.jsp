@@ -1,5 +1,5 @@
 <%@include file="/includes/Head.jsp"%>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -7,19 +7,11 @@
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Logo</a>
-		</div>
+			</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
-				<li><a href="userpage">Home</a></li>
 				<li><a href="men">Men</a></li>
-				<li><a href="Contact">Contact</a></li>
-			</ul>
-
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="<c:url value="j_spring_security_logout" />"><span
-						class="glyphicon glyphicon-log-out"></span> LOGOUT</a></li>
-			</ul>
+				</ul>
 		</div>
 	</div>
 </nav>

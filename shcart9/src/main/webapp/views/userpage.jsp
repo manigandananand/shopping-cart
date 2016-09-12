@@ -1,6 +1,6 @@
 <meta http-equiv="refresh" content="0; URL=./onLoad" />
 <%@include file="/includes/Head.jsp" %>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -12,12 +12,10 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="userpage">Home</a></li>
         <li><a href="men">MEN</a></li>
         <li><a href="women">WOMEN</a></li>
         
-        <li><a href="Contact">Contact</a></li>
-      </ul>
+        </ul>
       
     </div>
   </div>

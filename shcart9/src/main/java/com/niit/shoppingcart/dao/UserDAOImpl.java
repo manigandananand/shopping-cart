@@ -21,7 +21,19 @@ private SessionFactory sessionFactory;
 	/*public UserDAOImpl(SessionFactory sessionFactory){
 		this.sessionFactory = sessionFactory;
 	}*/
-@Transactional
+	@Transactional
+	public void saveOrUpdate(UserDetails userDetails, UserRole userRole) {
+		// TODO Auto-generated method stub
+	 Session session = sessionFactory.getCurrentSession();
+
+	userDetails.setEnabled(true);
+	userRole.setId(userDetails.getId());
+	userRole.setRole("ROLE_USER");
+	sessionFactory.getCurrentSession().saveOrUpdate(userDetails);
+	sessionFactory.getCurrentSession().saveOrUpdate(userRole);
+	
+}
+/*@Transactional
 	public List<User> list() {
 		// TODO Auto-generated method stub
 		@SuppressWarnings("unchecked")
@@ -48,27 +60,7 @@ private SessionFactory sessionFactory;
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().saveOrUpdate(user);
 	}
-@Transactional
-	public void saveOrUpdate(UserDetails userDetails, UserRole userRole) {
-		// TODO Auto-generated method stub
-	 Session session = sessionFactory.getCurrentSession();
 
-	userDetails.setEnabled(true);
-	userRole.setId(userDetails.getId());
-	userRole.setRole("ROLE_USER");
-	sessionFactory.getCurrentSession().saveOrUpdate(userDetails);
-	sessionFactory.getCurrentSession().saveOrUpdate(userRole);
-
-}
-@Transactional
-	public void delete(String id) {
-		// TODO Auto-generated method stub
-	User user=new User();
-	user.setId(id);
-	sessionFactory.getCurrentSession().delete(user);
-	
-		
-	}
 @Transactional
 	public boolean isValidUser(String id, String password, boolean isAdmin) {
 		// TODO Auto-generated method stub
@@ -82,7 +74,7 @@ private SessionFactory sessionFactory;
 		return true;
 	}
 		return false;
-	}
+	}*/
 /*@Transactional
 public void saveOrUpdate(UserRole userRole) {
 	sessionFactory.getCurrentSession().saveOrUpdate(userRole);

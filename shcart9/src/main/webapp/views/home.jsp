@@ -2,8 +2,7 @@
 
 <link rel="stylesheet" type="text/css"
 	href="<c:url value="/resources/css/menu.css"/>">
-
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -11,27 +10,20 @@
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Logo</a>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="">Home</a></li>
 				<li><a href="men">MEN</a></li>
 				<li><a href="women">WOMEN</a></li>
 
-				<li><a href="Contact">Contact</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="<c:url value="j_spring_security_logout" />"><span
-						class="glyphicon glyphicon-log-out"></span> LOGOUT</a></li>
-				<!-- <li><a  href="views/register.jsp"><span class="glyphicon glyphicon-user"></span>SIGNUP</a></li>
- -->
+							</ul>
+			<%-- 
 				<c:if test="${!empty userDetails && userDetails.admin==0}">
 					<li><a href="mycart"><span
 							class="glyphicon glyphicon-shopping-cart"></span> Cart(
 							${cartSize} )</a></li>
 				</c:if>
-			</ul>
+			 --%>
 		</div>
 	</div>
 </nav>

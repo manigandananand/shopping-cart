@@ -1,55 +1,5 @@
 <%@include file="/includes/Head.jsp"%>
-<nav class="navbar navbar-inverse">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse"
-				data-target="#myNavbar">
-				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-					class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">Logo</a>
-		</div>
-		<div class="collapse navbar-collapse" id="myNavbar">
-			<ul class="nav navbar-nav">
-				<li><a href="">Home</a></li>
-				<!-- 				<li><a href="#">Products</a></li>
-				<li><a href="#">Deals</a></li>
- -->
-				<li><a href="Contact">Contact</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="views/register.jsp"><span
-						class="glyphicon glyphicon-user"></span>SIGNUP</a></li>
-				<!-- <li><a href="#"><span
-						class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-		 -->
-			</ul>
-		</div>
-	</div>
-</nav>
 
-<%-- Please login with your credentials
-	<br> ${message}
-	<form:form action="isValidUser" method="post">
-		<table align="center" class="table">
-			<tr class="success">
-				<td>User Name:</td>
-				<td><input type="text" name="name"></td>
-			</tr>
-
-			<tr>
-				<td>Password:</td>
-				<td><input type="password" name="password" /></td>
-			</tr>
-			<tr class="active" align="center">
-				<td colspan="2"><button type="submit" id="form1"
-						class="btn btn-primary">SUBMIT</button></td>
-
-			</tr>
-
-		</table>
-	</form:form>
- --%>
 <div class="panel-body">
 	<div class="row">
 		<div class="col-lg-12">
@@ -85,6 +35,28 @@
 </div>
 
 
+<%-- Please login with your credentials
+	<br> ${message}
+	<form:form action="isValidUser" method="post">
+		<table align="center" class="table">
+			<tr class="success">
+				<td>User Name:</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+
+			<tr>
+				<td>Password:</td>
+				<td><input type="password" name="password" /></td>
+			</tr>
+			<tr class="active" align="center">
+				<td colspan="2"><button type="submit" id="form1"
+						class="btn btn-primary">SUBMIT</button></td>
+
+			</tr>
+
+		</table>
+	</form:form>
+ --%>
 
 
 <%@include file="/includes/Fotter.jsp"%>

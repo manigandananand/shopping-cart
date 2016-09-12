@@ -19,25 +19,7 @@ public class UserController {
    @Autowired
 	UserDAO userDAO;
     
-    /*@RequestMapping("/isValidUser")
-	public ModelAndView isValidUser(@RequestParam(value = "name") String name,
-			@RequestParam(value = "password") String password) {
-		System.out.println("in controller");
-		String message;
-		ModelAndView mv ;
-		if (userDAO.isValidUser(name, password,true)) 
-		{
-			message = "Valid credentials";
-			 mv = new ModelAndView("adminHome");
-		} else {
-			message = "Invalid credentials";
-			 mv = new ModelAndView("login");
-		}
-		mv.addObject("message", message);
-		mv.addObject("name", name);
-		return mv;
-	}
-    */
+    
    @RequestMapping("/")
 	public ModelAndView index()
 	{
@@ -108,6 +90,24 @@ public class UserController {
 	public String addCategory(@ModelAttribute("register") UserDetails userdetails,UserRole userRole){
 		userDAO.saveOrUpdate(userdetails,userRole);
 		return "login";
-		
+			}
+	/*@RequestMapping("/isValidUser")
+	public ModelAndView isValidUser(@RequestParam(value = "name") String name,
+			@RequestParam(value = "password") String password) {
+		System.out.println("in controller");
+		String message;
+		ModelAndView mv ;
+		if (userDAO.isValidUser(name, password,true)) 
+		{
+			message = "Valid credentials";
+			 mv = new ModelAndView("adminHome");
+		} else {
+			message = "Invalid credentials";
+			 mv = new ModelAndView("login");
+		}
+		mv.addObject("message", message);
+		mv.addObject("name", name);
+		return mv;
 	}
+    */
 }
